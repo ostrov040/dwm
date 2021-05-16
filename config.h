@@ -2,13 +2,13 @@
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int gappx     = 10;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char statussep         = ';';      /* separator between status bars */
-static const int user_bh            = 35;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=12"};
+static const int user_bh            = 35;       /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=12", "NotoColor'Emoji:size=12"};
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -17,8 +17,8 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_base[]        = "#a36700";
 static const char *colors[][4]      = {
 	/*               fg         bg         border     float */
-	[SchemeNorm] = { col_gray3, col_gray1, "#a36700", col_gray2 },
-	[SchemeSel] =  { col_gray4, col_base,  "#ff9d26", col_base },
+	[SchemeNorm] = { col_gray3, col_gray1, "#00510a", col_gray2 },
+	[SchemeSel] =  { col_gray4, col_base,  "#ff9d26", col_base  },
 };
 
 /* tagging */
@@ -31,8 +31,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "vimb",     NULL,       NULL,           2,            0,            -1 },
 };
 
 /* layout(s) */
@@ -101,7 +100,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{MODKEY|ShiftMask,                       XK_q,      quit,           {0}        },
 };
 
 /* button definitions */
